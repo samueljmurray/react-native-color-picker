@@ -174,8 +174,8 @@ export class HoloColorPicker extends Component {
           }
         </View>
         <View>
-          <Slider value={s} onValueChange={this._onSValueChange} />
-          <Slider value={v} onValueChange={this._onVValueChange} />
+          <Slider minimumTrackTintColor={this.props.sliderMinimumTrackTintColor} maximumTrackTintColor={this.props.sliderMaximumTrackTintColor} value={s} onValueChange={this._onSValueChange} />
+          <Slider minimumTrackTintColor={this.props.sliderMinimumTrackTintColor} maximumTrackTintColor={this.props.sliderMaximumTrackTintColor} value={v} onValueChange={this._onVValueChange} />
         </View>
       </View>
     )
@@ -193,6 +193,8 @@ HoloColorPicker.propTypes = {
   onColorChange: PropTypes.func,
   onColorSelected: PropTypes.func,
   onOldColorSelected: PropTypes.func,
+  sliderMinimumTrackTintColor: PropTypes.string,
+  sliderMaximumTrackTintColor: PropTypes.string
 }
 
 const makeComputedStyles = ({
